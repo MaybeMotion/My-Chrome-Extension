@@ -1,0 +1,8 @@
+node_modules/
+*.zip
+.DS_Store
+
+# Keep the downloadable release alongside the portable builder.
+!downloads/rephrase-extension-1.1.5.zip
+__pycache__/
+*.py[cod]

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rephrase • Your local writing studio</title><link rel="stylesheet" href="ui.css"></head>
+<body><main class="page">
+  <nav class="nav"><div class="brand"><img class="app-icon" src="icons/48.png" width="34" height="34" alt="">rephrase</div><span class="eyebrow">THE LOCAL WRITING STUDIO</span></nav>
+  <div class="grid"><section>
+    <span class="eyebrow">GOOD WORDS. GREAT IMPRESSIONS.</span><h1>Sound like you.<br><em>On a great day.</em></h1>
+    <p>For the email you’ve rewritten three times.<br>The reply that needs a softer landing.<br>The idea that deserves fewer words.</p>
+    <div class="pills"><span class="pill">☀ Friendly</span><span class="pill">◇ Professional</span><span class="pill">⌁ Humorous</span><span class="pill">→ Short & sweet</span></div>
+    <p class="hint">Select text inside an editable field or email draft to bring up Rephrase. Selecting ordinary webpage text to copy won’t open the panel. The panel follows your selection as you scroll. Reload existing tabs after updating the extension.</p>
+  </section><section class="card local-setup">
+    <h2>Your Mac. Your words. No API bills.</h2>
+    <p>Rephrase runs locally with the Ollama app and Qwen 2.5 3B. No API key or subscription is needed. The model download is roughly 2 GB; speed depends on your Mac.</p>
+    <ol class="setup-steps">
+      <li><a href="https://ollama.com/download/mac" target="_blank" rel="noreferrer">Install Ollama for Mac ↗</a>, then open it.</li>
+      <li>Open Terminal and download the model. If you already have it, skip this step:
+        <code class="command-block" id="pull-command">ollama pull qwen2.5:3b</code>
+      </li>
+      <li>Allow this extension to connect. Copy this command into Terminal:
+        <code class="command-block" id="ollama-origin-command">Open this page through the installed extension to see your command.</code>
+        <button class="delete" id="copy-origin" type="button" disabled>Copy command</button>
+      </li>
+      <li>Fully quit Ollama from its menu-bar icon and open it again. Keep it running while you use Rephrase.</li>
+    </ol>
+    <button class="primary save" id="test-connection" type="button">Check local connection →</button>
+    <div class="status" id="status" role="status" aria-live="polite">Ready when you are. The first rewrite may take longer while the model loads.</div>
+    <p class="hint">Your text goes only to the Ollama app on this Mac when you choose a tone. Rephrase never calls OpenAI. If Chrome asks for local-network access, allow it for Rephrase. Setup is automatic; there’s nothing to enter or save.</p>
+    <details><summary>Using Windows or Linux, or need help?</summary><p>Install Ollama for your system and the same Qwen model. The included README explains how to allow this extension to connect on Windows and Linux. If the model loads slowly, run <code>ollama run qwen2.5:3b</code> first, then try again.</p></details>
+  </section></div>
+  <section class="card practice"><h2>Your first better sentence starts here.</h2><p>Try highlighting the text below, then choose a tone. Nothing is sent until you do.</p><textarea aria-label="Practice writing" spellcheck="false">Hey Alex, I was wondering if you had a chance to look at the proposal I sent over last week? It would be really great to hear your thoughts whenever you have a moment. Thanks!</textarea></section>
+  <div class="bottom">A little intention goes a long way. Review every rewrite before sending. · Rephrase 1.1.5</div>
+</main><script src="options.js"></script><script src="content.js"></script></body></html>
